@@ -52,7 +52,7 @@ fn main() {
         ("rm", Some(_matches)) => {
             let key = _matches.value_of("key").unwrap().to_string();
             println!("rm key: {}", key);
-            let _value = kv_store.remove(key);
+            kv_store.remove(key);
             eprintln!("unimplemented");
             exit(1);
         }
